@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        .mySlides {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="w3-center">Automatic Slideshow</h2>
+
+    <div class="w3-content w3-section" style="max-width:500px">
+        <img class="mySlides" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fdirectorsblog.nih.gov%2F2020%2F03%2F26%2Fgenomic-research-points-to-natural-origin-of-covid-19%2F&psig=AOvVaw0EkbtCsnkmQZDeFv8Fqx8f&ust=1623048844386000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCIj_lKO2gvECFQAAAAAdAAAAABAD" style="width:100%">
+        <img class="mySlides" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fguides.library.unlv.edu%2Fc.php%3Fg%3D993070%26p%3D7506554&psig=AOvVaw0EkbtCsnkmQZDeFv8Fqx8f&ust=1623048844386000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCIj_lKO2gvECFQAAAAAdAAAAABAL" style="width:100%">
+        <img class="mySlides" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.idilnews.com%2F2021%2F02%2F17%2Fkuuriyada-waqooyi-oo-xaday-xogta-tallaalka-covid-19%2F&psig=AOvVaw0EkbtCsnkmQZDeFv8Fqx8f&ust=1623048844386000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCIj_lKO2gvECFQAAAAAdAAAAABAX" style="width:100%">
+    </div>
+
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 2000); // Change image every 2 seconds
+        }
+    </script>
+</body>
+</html>
+
